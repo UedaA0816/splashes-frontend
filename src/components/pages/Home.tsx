@@ -4,8 +4,9 @@ import Unsplash from "../organisms/Unsplash";
 import HeaderMain from "../templates/HeaderMain";
 
 const Home = ()=>{
+  const width = 600
   return (
-  <HeaderMain>
+  <HeaderMain width={width}>
     <Header />
     <Unsplash />
   </HeaderMain>
