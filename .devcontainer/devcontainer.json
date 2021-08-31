@@ -1,0 +1,70 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.187.0/containers/typescript-node
+{
+  "name": "Node.js & TypeScript",
+  "build": {
+    "dockerfile": "Dockerfile",
+    // Update 'VARIANT' to pick a Node version: 12, 14, 16
+    "args": {
+      "VARIANT": "14"
+    }
+  },
+
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+      "source.fixAll.stylelint": true
+    },
+    "eslint.validate": ["html", "javascriptreact", "typescriptreact"],
+    "less.validate": false,
+    "scss.validate": false,
+    "stylelint.enable": true,
+    "tailwindCSS.includeLanguages": {
+      "typescriptreact": "html"
+    },
+    // CSSのチェック機能をオフ
+    "css.validate": false,
+
+    // JSXでもCSSクラスを補完できるように
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+
+    // emmetでTailwind CSSのクラスを使えるように
+    "tailwindCSS.emmetCompletions": true,
+
+    // Tailwind CSSのDirectivesをLintする
+    "tailwindCSS.validate": true,
+  },
+
+
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "visualstudioexptteam.vscodeintellicode",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "hookyqr.beautify",
+    "alefragnani.bookmarks",
+    "lacroixdavid1.vscode-format-context-menu",
+    "eamodio.gitlens",
+    "oderwat.indent-rainbow",
+    "ionutvmi.path-autocomplete",
+    "chrmarti.regex",
+    "humao.rest-client",
+    "wayou.vscode-icons-mac",
+    "bradlc.vscode-tailwindcss",
+    "stylelint.vscode-stylelint",
+    "dsznajder.es7-react-js-snippets"
+  ],
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [3000],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "yarn install",
+
+  // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "node"
+}
