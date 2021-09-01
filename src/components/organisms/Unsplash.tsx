@@ -1,6 +1,5 @@
 import { useRecoilValue } from "recoil"
 import { searchedPhotoListSelector } from "../../selectors/SearchedPhotoListSelector"
-import Photo from "../molecules/Photo"
 import StackGrider from "../molecules/StackGrider"
 
 const Unsplash = ()=>{

@@ -1,26 +1,18 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
-import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil"
+import { useRecoilState, useRecoilValue } from "recoil"
 import { photoSearchTextFormState } from "../../atoms/PhotoSearchTextFormAtom"
 import { photoUserIdState } from "../../atoms/PhotoUserIdAtom"
-import { useDebounce } from "../../customHooks/useDebounce"
 import Logo from "../atoms/Logo"
 import Button from "../molecules/Button"
 import SearchInput from "../molecules/SearchInput"
 
 const Header = ()=>{
 
-  const [searchText, setSearchText] = useState("")
-  const setSearchTextState = useSetRecoilState(photoSearchTextFormState)
-  const debouncedSearchText = useDebounce(searchText,750)
+  const [searchText, setSearchText] = useRecoilState(photoSearchTextFormState)
 
   const handlerSearchInput:React.ChangeEventHandler<HTMLInputElement> = (e) => {
     setSearchText(e.target.value)
   }
-
-  useEffect(() => {
-    setSearchTextState(debouncedSearchText)
-  }, [debouncedSearchText])
 
   const user_id = useRecoilValue(photoUserIdState)
 
