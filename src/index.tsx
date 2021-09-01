@@ -1,9 +1,12 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { RecoilRoot } from 'recoil';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
 ReactDOM.render(
   <React.StrictMode>
