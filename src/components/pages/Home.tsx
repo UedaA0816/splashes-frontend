@@ -8,9 +8,7 @@ const Home = ()=>{
   return (
   <HeaderMain width={width}>
     <Header />
-    <Suspense fallback={<p>loading</p>}>
-      <Unsplash />
-    </Suspense>
+    <Unsplash />
   </HeaderMain>
   )
 }
