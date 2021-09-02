@@ -5,7 +5,7 @@ const HeaderMain:React.FC<{width:number}> = ({children,width})=>{
   return (
     <div className="h-full flex flex-col mx-auto" style={{width:width}}>
       <header>{header}</header>
-      {main.map((v,i)=><main className="flex-grow" key={i}>{v}</main>)}
+      {main.map((v,i)=><main className="flex-grow overflow-scroll" key={i}>{v}</main>)}
     </div>
   )
 }
