@@ -7,7 +7,7 @@ export function useWidthBreak(breakpoints:{break:number,width:number}[]) {
   useEffect(() => {
     for (let p of breakpoints) {
       if(!width){
-        setWindowSize(breakpoints[breakpoints.length].width)
+        setWindowSize(breakpoints[breakpoints.length-1].width)
         return
       }
       if(p.break < width){
