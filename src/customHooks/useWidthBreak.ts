@@ -3,7 +3,7 @@ import { useWindowSize } from "./useWindowSize";
 
 export function useWidthBreak(breakpoints:{break:number,width:number}[]) {
   const [windowSize, setWindowSize] = useState<number|undefined>(undefined);
-  const {width, height} = useWindowSize()
+  const { width } = useWindowSize()
   useEffect(() => {
     for (let p of breakpoints) {
       if(!width){

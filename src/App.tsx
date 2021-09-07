@@ -1,12 +1,7 @@
-import React, { useEffect } from 'react';
-import { useSetRecoilState } from 'recoil';
-import { photoUserIdState } from './atoms/PhotoUserIdAtom';
+import React from 'react';
 import Home from './components/pages/Home';
 
-const App: React.FC = () => {
-  
-  return <Home />
-}
+const App: React.FC = () => <Home />
 
 
 export default App;

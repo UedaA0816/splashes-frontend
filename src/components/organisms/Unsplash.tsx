@@ -1,4 +1,4 @@
-import { useRecoilValue, useRecoilValueLoadable } from "recoil"
+import { useRecoilValueLoadable } from "recoil"
 import { searchedPhotoListSelector } from "../../selectors/SearchedPhotoListSelector"
 import StackGrider from "../molecules/StackGrider"
 

@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { useWidthBreak } from "../../customHooks/useWidthBreak";
 import Header from "../organisms/Header";
 import Unsplash from "../organisms/Unsplash";
