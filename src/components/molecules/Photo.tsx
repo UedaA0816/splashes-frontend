@@ -24,7 +24,7 @@ const Photo:React.VFC<PhotoProps> = ({label,photo_uri,_id})=>{
       updateSearchedPhotoList(undefined)
     })
   }
-  const className = `w-full rounded-2xl transition ${hover ? "filter brightness-75" : ""}`
+  const className = `w-full rounded-2xl transition ${hover ? "filter brightness-50" : ""}`
   const textClassName = `text-white absolute bottom-0 w-full px-4 mb-2 font-bold text-lg opacity-0 transition-opacity ${hover?"opacity-100":""}`
   const buttonClassName = `absolute top-0 w-full p-3 text-right opacity-0 transition-opacity ${hover?"opacity-100":""} ${hover?"":"hidden"}`
   return (
